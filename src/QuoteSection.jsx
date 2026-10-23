@@ -10,7 +10,7 @@ function QuoteSection() {
 
 
     function fetchQuote(){
-        axios.get("http://dummyjson.com/quotes").then(
+        axios.get("https://dummyjson.com/quotes").then(
             (response)=>{
                 setQuote(response.data.quotes)
             }
@@ -29,7 +29,6 @@ function QuoteSection() {
         fetchQuote()
     }, [])
 
-    console.log("Error state:", error);
     
     if(error){
         return <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 text-center">
